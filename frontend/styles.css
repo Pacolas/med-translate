@@ -1,0 +1,91 @@
+body{
+    height: 100%;
+}
+main{
+    display: block !important;
+    height: 70%;
+    padding: 5% 10% 10% 10%;
+    
+
+}
+.language_name{
+    font-size: 3vh;
+    height: 3.4vh;
+
+}
+.not-availiable{
+    background-color: rgb(215, 215, 215);
+    color:gray !important;
+    border-color: gray;
+    
+}
+.availiable{
+    background-color: rgb(111, 158, 111);
+    color:black
+}
+
+.playback_t{
+    visibility: hidden;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    display: block;
+   
+}
+
+.output
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+   
+    
+}
+
+.display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    padding: 1%;
+    justify-content: center;
+    height: 70vh;
+
+}
+.container{
+    display: grid;
+    
+    height: 100%;
+}
+.p{
+    display:inline;
+    width: min-content;
+}
+
+
+.display_text{
+    height: 80%;
+}
+
+
+.is-recording {
+    background-color: rgb(137, 77, 77) !important;
+
+}
+
+#start{
+    background-color: rgb(165, 161, 69);
+    color: white;
+    width: 80%;
+    height: 5%;
+}
+audio{
+    width: 80%;
+}
+
+button{
+    border-radius: 29px;
+    height: 3vh;
+}
+

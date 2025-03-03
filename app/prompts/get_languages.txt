@@ -1,0 +1,12 @@
+# Task
+
+I want you to list the languages you can translate to. 
+Follow the next specifictions
+- I would like you to choose only those where you can translate Healthcare and medical texts.
+- I want only the name.
+
+# Response
+The response must contain only a Python List with the languages, named with sigle quotes.
+The response must be in text
+Example:
+["Spanish","English", "French"]

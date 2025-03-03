@@ -1,0 +1,10 @@
+google-generativeai
+grpcio==1.60.1
+fastapi
+uvicorn==0.34.0
+SpeechRecognition 
+pyaudio
+gtts==2.5.4
+sounddevice
+python-multipart
+openai-whisper

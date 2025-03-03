@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+            <label for="dataPicker">Choose one option:</label>
+            <select id="dataPicker">
+                <option value="">Choose...</option>
+            </select>
+            <div class="display">
+
+                <div class="input">
+                    <div id="source" class="language_name"></div>
+                    <div id="text_input" class="display_text">
+                        <div class="s1 p" >Record an audio to start</div>
+                        
+                      
+                    </div>
+                    <audio class="playback" controls></audio>
+                    <button id="start">Start Recording</button>
+
+
+                </div>
+                <div class="output">
+                    <div id="final" class="language_name"></div>
+                    <div id="text_output" class="display_text">
+                        <div id="s1" class="s1 p" >Record an audio to start</div>
+                        
+                    </div>
+                    <audio class="playback_t" controls></audio>
+                </div>
+                
+            </div>
+
+            
+
+
+            <button id="send" class="not-availiable">Send</button>
+            <script src="main.js"></script>
+        </div>
+    </main>
+
+</body>
+
+</html>

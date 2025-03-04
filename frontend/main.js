@@ -1,8 +1,8 @@
 // GET LANGUAGES
-
+const API_IP = "34.67.226.152/"
 get_languages()
 async function get_languages() {
-    const languages = await fetch("http://localhost:8000/languages", {
+    const languages = await fetch("http://${API_IP}:8000/languages", {
         method: "GET"
     })
     const result = await languages.json()
@@ -166,7 +166,7 @@ snd_button.addEventListener("click", async () => {
 
 
 
-        const text = await fetch("http://localhost:8000/translate/" + id_audio + "/" + picker.value,
+        const text = await fetch("http://${API_IP}:8000/translate/" + id_audio + "/" + picker.value,
             {
                 method: "POST",
                 headers: {
@@ -197,7 +197,7 @@ snd_button.addEventListener("click", async () => {
         console.log(text1)
         addHover()
 
-        let url = "http://localhost:8000/translated/" + id_audio + ".mp3"
+        let url = "http://${API_IP}:8000/translated/" + id_audio + ".mp3"
 
         wait(url).then(url => {
             if (url !== null) {

@@ -1,6 +1,8 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from services.translator_ai import GeminiAI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
+
 from contextlib import asynccontextmanager
 from services.speech_to_text import Recognizer
 import shutil
@@ -17,13 +19,13 @@ async def lifespan(app: FastAPI):
     print("Cerrando la aplicación...")
 
 app = FastAPI(lifespan=lifespan)
-   
+app.add_middleware(HTTPSRedirectMiddleware)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # O especifica los dominios permitidos
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  # Permitir todos los métodos HTTP (POST, GET, OPTIONS, etc.)
-    allow_headers=["*"],  # Permitir todos los headers
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
 UPLOAD_DIR = "audio"
 AUDIO_DIR = "processed"

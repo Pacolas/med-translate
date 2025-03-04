@@ -1,9 +1,9 @@
-
+body{margin: 1%;}
 
 header{
     background-color: black;
     height: 5vh;
-    width: 100%;
+    width: 95%;
     color: white;
     display: flex;
     border-radius: 15px;

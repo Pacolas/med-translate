@@ -1,5 +1,5 @@
 // GET LANGUAGES
-const API_IP = "34.67.226.152/"
+const API_IP = "34.67.226.152"
 get_languages()
 async function get_languages() {
     const languages = await fetch("http://${API_IP}:8000/languages", {

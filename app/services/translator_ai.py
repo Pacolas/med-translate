@@ -121,10 +121,12 @@ class  GeminiAI():
 
         translate = self.model.last.text
         response = translate[translate.find("{"):translate.find("}")+1]
+        
         try: 
             response = json.loads(response)
-        except:
-            response =  translate[translate.find("{"):translate.find("}")+1]
+        except Exception as e:
+            print(e, response)
+        
         return response
     
     

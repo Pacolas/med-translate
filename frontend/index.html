@@ -12,40 +12,66 @@
 </head>
 
 <body>
-
+    <header> TransLATEnoW </header>
     <main>
 
         <div class="container">
-            <label for="dataPicker">Choose one option:</label>
-            <select id="dataPicker">
-                <option value="">Choose...</option>
-            </select>
-            <div class="display">
 
-                <div class="input">
-                    <div id="source" class="language_name"></div>
+
+            <div class="display" id="display">
+
+                <label for="language-picker">Translating From:</label>
+                <label for="dataPicker">To:</label>
+                <select id="language-picker">
+                    <option value="es-ES">Español (España)</option>
+                    <option value="es-MX">Español (México)</option>
+                    <option value="en-US">Inglés (EE.UU.)</option>
+                    <option value="en-GB">Inglés (Reino Unido)</option>
+                    <option value="fr-FR">Francés (Francia)</option>
+                    <option value="de-DE">Alemán</option>
+                    <option value="it-IT">Italiano</option>
+                    <option value="pt-BR">Portugués (Brasil)</option>
+                    <option value="ru-RU">Ruso</option>
+                    <option value="zh-CN">Chino (Mandarín - Simplificado)</option>
+                    <option value="ja-JP">Japonés</option>
+                    <option value="ko-KR">Coreano</option>
+                    <option value="ar-SA">Árabe (Arabia Saudita)</option>
+                </select>
+
+                <select id="dataPicker">
+                    <option value="">Choose...</option>
+                </select>
+                <div id="source" class="language_name"></div>
+                <div id="final" class="language_name"></div>
+
+
+
+                <!-- <div class="input">
+                    
                     <div id="text_input" class="display_text">
-                        <div class="s1 p" >Record an audio to start</div>
+                     
                         
                       
                     </div>
-                    <audio class="playback" controls></audio>
-                    <button id="start">Start Recording</button>
+                    
 
 
                 </div>
                 <div class="output">
-                    <div id="final" class="language_name"></div>
+                   
                     <div id="text_output" class="display_text">
-                        <div id="s1" class="s1 p" >Record an audio to start</div>
+                        
                         
                     </div>
-                    <audio class="playback_t" controls></audio>
-                </div>
-                
+              
+                </div> -->
+
+
             </div>
 
-            
+            <audio class="playback" controls></audio>
+            <button id="start">Start Recording</button>
+
 
 
             <button id="send" class="not-availiable">Send</button>

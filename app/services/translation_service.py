@@ -1,7 +1,7 @@
 from services.speech_to_text import Recognizer
 from services.translator_ai import GeminiAI
 from gtts import gTTS
-def translate_speech(name:str, to:str, rec: Recognizer) ->dict:
+def translate_speech(name:str, to:str, text: str) ->dict:
     """
     Function to process the speech and translate it to a given language.
     Params:
@@ -17,7 +17,7 @@ def translate_speech(name:str, to:str, rec: Recognizer) ->dict:
 
     """
 
-    text = rec.recognize(name)
+    
  
     languages = {
         "English":"en",
@@ -33,7 +33,7 @@ def translate_speech(name:str, to:str, rec: Recognizer) ->dict:
         "Korean": "ko"
     }
     result = GeminiAI().translate(language=to,text=text)
-
+    print(result)
     try: 
         text_ = result['translated_text'] 
     except:

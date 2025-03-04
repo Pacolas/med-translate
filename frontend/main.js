@@ -144,12 +144,13 @@ picker.addEventListener("change", () => {
 
 
 // API CONNECTION BUTTON 
-
+let sending = false
 
 snd_button.addEventListener("click", async () => {
+ 
     snd_button.style.visibility = "hidden"
-    if (picker.value.trim() && id_audio !== null && src_picker.value.trim()) {
-
+    if (picker.value.trim() && id_audio !== null && src_picker.value.trim() && !sending) {
+        sending = true
         const div = document.createElement("audio");
         div.src = audioURL
         div.controls = true;
@@ -207,10 +208,10 @@ snd_button.addEventListener("click", async () => {
                 snd_button.className = "not-availiable"
             }
         });
-
+        sending = false
     }
     else {
-        console.log("There is no Audio to translate, or the language was not selected")
+        alert("There is no Audio to translate, or the language was not selected")
     }
     snd_button.style.visibility = "visible"
 });
